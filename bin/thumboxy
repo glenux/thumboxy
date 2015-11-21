@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+# require 'rack'
+require 'sinatra'
+require 'thumboxy'
+
+begin
+	Rack::Handler::WEBrick.run ThumboxyApp, Port: 9000
+rescue Interrupt
+	puts "Exiting..."
+	exit false
+end
+
+
